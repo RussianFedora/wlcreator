@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=WLCreator
+GenericName=Wine Launcher Creator
+Comment=Creating Linux desktop launchers for Windows programs
+Exec=wlcreator
+Icon=
+Terminal=false
+Type=Application
+Categories=X-Wine;
