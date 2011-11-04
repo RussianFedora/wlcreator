@@ -1,6 +1,6 @@
 Name:           wlcreator
 Version:        1.0.3
-Release:        2%{?dist}.R
+Release:        3%{?dist}.R
 BuildArch:      noarch
 Summary:        Creating Linux desktop launchers for Windows programs
 
@@ -31,9 +31,6 @@ for Windows programs (using Wine).
 
 %install
 %{__install} -D wlcreator.py $RPM_BUILD_ROOT%{_bindir}/wlcreator
-%{__install} -D NoInternet.txt $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}/NoInternet.txt
-%{__install} -D Readme.txt $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}/Readme.txt
-%{__install} -D gpl.txt $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}/gpl.txt
 desktop-file-install --dir=$RPM_BUILD_ROOT%{_datadir}/applications/ %{SOURCE1}
 
 %files
@@ -43,6 +40,9 @@ desktop-file-install --dir=$RPM_BUILD_ROOT%{_datadir}/applications/ %{SOURCE1}
 %{_datadir}/applications/wlcreator.desktop
 
 %changelog
+* Fri Nov 04 2011 Romanov Ivan <drizt@land.ru> 1.0.3-3
+- Dropped useless docs installing
+
 * Thu Nov 03 2011 Romanov Ivan <drizt@land.ru> 1.0.3-2
 - Added wlcreator-utf-8-support patch
 - Added wlcreator-icotool patch
